@@ -6,26 +6,26 @@
  */
 int main(void)
 {
-	int n, m;
+	int i, j, k;
 
-	for (n = 48; n <= 56; n++)
+	i = 0;
+	while (i < 100)
 	{
-		for (m = 49; m <= 57; n++)
+		j = i % 10;
+		k = i / 10;
+		if (k < j)
 		{
-			for (m = 49; m <= 57; m++)
+			putchar(k + '0');
+			putchar(j + '0');
+
+			if (i < 89)
 			{
-				if (m > n)
-				{
-				putchar(n);
-				putchar(m);
-					if (n != 56 || m != 57)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
+				putchar(44);
+				putchar(32);
 			}
 		}
-		putchar('\n');
-		return (0);
+		i++;
+	}
+	putchar('\n');
+	return (0);
 }
