@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 /**
- * main - main block
+ * main - Entry point
  * Description: Use `putchar` function to print alphabets.
  * Return 0
  */
