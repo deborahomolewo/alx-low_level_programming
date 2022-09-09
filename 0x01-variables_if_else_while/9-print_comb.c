@@ -11,15 +11,15 @@
  */
 int main(void)
 {
-	int i = 0;
+	int n;
 
-	while (i < 10)
+	for (n = 48; n < 58; n++)
 	{
-		putchar(i + '0');
-		if (1 < 9)
+		putchar(n);
+		if (n != 57)
 		{
-			putchar(44);
-			putchar(32);
+			putchar(',');
+			putchar(' ');
 		}
 	}
 		putchar('\n');
