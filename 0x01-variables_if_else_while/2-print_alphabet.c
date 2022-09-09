@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - Entry point
+ * main - start program
  * Description: Use `putchar` function to print alphabets.
- * Return 0
+ * Return 0 (success)
  */
 int main(void)
 {
