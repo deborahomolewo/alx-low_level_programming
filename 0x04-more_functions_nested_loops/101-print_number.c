@@ -1,5 +1,4 @@
 #include "main.h"
-void print_unsigned_int(unsigned int n);
 /**
  * print_number - print number n with putcher
  * @n: number to print
@@ -7,23 +6,29 @@ void print_unsigned_int(unsigned int n);
  */
 void print_number(int n)
 {
+	int nn = 1;
+	unsigned int i, j;
+
 	if (n < 0)
 	{
 		_putchar('-');
-		print_unsigned_int(-(unsigned int)n);
+		j = -n;
 	}
 	else
-		print_unsigned_int(n);
-}
-/**
- * print_unsigned_int - prints an unsigned integer
- * @n: an unsigned integer to print
- * Return: always void
- */
-void print_unsigned_int(unsigned int n)
-{
-	if (n / 10 != 0)
 	{
-		print_unsigned_int(n / 10);
+		j = n;
 	}
-	_putchar((n % 10) + '0');
+	i = j / 10;
+	while (i != 0)
+	{
+		i /= 10;
+		nn *= 10;
+	}
+	while (nn != 1)
+	{
+		_putchar((j / nn) + '0');
+		j %= nn;
+		nn /= 10;
+	}
+	_putchar(j + '0');
+}
