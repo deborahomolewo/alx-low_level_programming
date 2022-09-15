@@ -1,1 +1,1 @@
-Task 1
+Task 2 -  a function that multiplies two integers.
