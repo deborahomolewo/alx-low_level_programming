@@ -1,4 +1,5 @@
 #include <stdio.h>
+void fizz_buzz(void);
 /**
  * main - entry point
  * Description: prints FizzBuzz
@@ -6,22 +7,24 @@
  */
 int main(void)
 {
-	int n;
+	int i;
 
-	for (n = 1; n <= 100; n++)
+	i = 1;
+	while (i <= 100)
 	{
-		if ((n % 3 == 0) && (n % 5 == 0)
+		if ((i % 3 == 0) && (i % 5 == 0))
 			printf("FizzBuzz");
-		else if (n % 5 == 0)
-			printf("Buzz");
-		else if (n % 3 == 0)
+		else if (i % 3 == 0)
 			printf("Fizz");
+		else if (i % 5 == 0)
+			printf("Buzz");
 		else
-			printf("%i", n);
-		if (n < 100)
-			printf(" ");
-		else
-			printf("\n");
+			printf("%d", i);
+		if (i == 100)
+			break;
+		putchar(' ');
+		i++;
 	}
+	putchar('\n');
 	return (0);
 }
