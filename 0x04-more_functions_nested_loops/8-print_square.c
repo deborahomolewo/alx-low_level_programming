@@ -1,4 +1,4 @@
-i#include "main.h"
+#include "main.h"
 /**
  * print_square - prints square
  * @size: integer (length & width) to set square size
