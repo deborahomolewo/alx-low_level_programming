@@ -7,18 +7,21 @@
  */
 int main(void)
 {
-	int r = 0, c = 0;
-	time_t t;
+	char pass[60] = "\0";
+	char h[63] = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	int s = 0, i = 0, tempo = 0;
 
-	srand((unsigned int) time(&t));
-	while (c < 2772)
+	srand(time(NULL));
+	while (s < 2772 - 'z')
 	{
-		r = rand() % 128;
-		if ((c + r) > 2772)
-			break;
-		c = c + r;
-		printf("%c", r);
+		tempo = rand() % 62;
+		s += h[tempo];
+		pass[i++] = h[tempo];
 	}
-	printf("%c\n", (2772 - c));
+
+	pass[i] = (2772 - s);
+	pass[i + 1] = '\0';
+
+	printf("%s", pass);
 	return (0);
 }
